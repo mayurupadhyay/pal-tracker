@@ -22,6 +22,7 @@ public class EnvController {
                             @Value("${cf.instance.addr:NOT SET}") String setCfInstanceAddr
     ) {
         this.PORT = setPort;
+
         this.MEMORY_LIMIT = setMemLmt;
         this.CF_INSTANCE_INDEX = setCfInstanceIndex;
         this.CF_INSTANCE_ADDR =setCfInstanceAddr;
