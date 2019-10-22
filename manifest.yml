@@ -1,7 +1,9 @@
 applications:
   - name: pal-tracker
     path: build/libs/pal-tracker.jar
-    random-route: true
+    routes:
+      - route: pal-tracker-mayur-up.apps.burger.pal.pivotal.io
+    #random-route: true // not required because we r going to map-route
     env:
-      WELCOME_MESSAGE: Hello from Cloud Foundry
+      WELCOME_MESSAGE: Hello
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
