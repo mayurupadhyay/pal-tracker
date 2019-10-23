@@ -38,10 +38,9 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
         if(hmRepo.containsKey(tmID)) {
             timeEntry.setId(tmID);
             hmRepo.replace(tmID, timeEntry);
-
         }
 
-        return (TimeEntry) hmRepo.get(tmID);
+        return  hmRepo.get(tmID);
 
 
     }
