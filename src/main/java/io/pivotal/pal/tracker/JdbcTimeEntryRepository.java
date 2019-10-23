@@ -28,7 +28,7 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository {
 
         jdbcTemplate.update(connection -> {
             PreparedStatement statement = connection.prepareStatement(
-                    "INSERT INTO tracker_test.time_entries (project_id, user_id, date, hours) " +
+                    "INSERT INTO time_entries (project_id, user_id, date, hours) " +
                             "VALUES (?, ?, ?, ?)",
                     RETURN_GENERATED_KEYS
             );
