@@ -1,0 +1,30 @@
+commands:
+
+# command to create a jar of sprint boot project
+./gradlew clean build
+
+# cloud foundry push: cf push projectName -p [path of the jar] 
+cf push paltracker -p ./build/libs/pal-tracker.jar --random-route
+
+cf set-env pal-tracker JBP_CONFIG_OPEN_JDK_JRE '{ jre: { version: 11.+ } }'
+
+
+cf start pal-tracker
+
+
+
+
+
+
+git remote add origin https://github.com/mayurupadhyay/pal-tracker.git
+
+WELCOME_MESSAGE=hello ./gradlew bootRun
+
+
+MEMORE_LIMIT=4 ./gradlew bootRun
+
+WELCOME_MESSAGE=Hello ./gradlew bootRun
+
+
+fa037f4c6ec1c0cc8b1ced0979753bdd5ead6a91
+

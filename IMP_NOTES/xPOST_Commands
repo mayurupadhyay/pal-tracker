@@ -1,0 +1,38 @@
+curl -i -XPOST -H "Content-Type: application/json" https://paltrackerenv-funny-antelope.cfapps.io/time-entries -d"{\"projectId\": 32, \"userId\": 32, \"date\": \"2019-01-01\", \"hours\": 32}"
+
+curl -i -XDELETE -H"Content-Type: application/json" https://paltrackerenv-funny-antelope.cfapps.io/time-entries/1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public TimeEntry create(TimeEntry timeEntry) {
+
+        // the mysql insert statement
+        String insertQuery = " insert into tracker_test.time_entries (project_id, user_id, date, hours)"
+                + " values (?, ?, ?, ?)";
+
+        int r = jdbcTemplate.update(insertQuery,timeEntry.getProjectId(),timeEntry.getUserId(),timeEntry.getDate(),timeEntry.getHours());
+        System.out.println("---------------Row inserted: "+r);
+
+        int id = jdbcTemplate.queryForObject("SELECT id from tracker_test.time_entries", Integer.class);
+        timeEntry.setId(id);
+        return timeEntry;
+    }
+
+
+
+
+

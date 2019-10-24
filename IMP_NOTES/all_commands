@@ -1,0 +1,92 @@
+1907  ping -a api.run.pivotal.io
+ 1908  cd ..
+ 1909  ls
+ 1910  cd pal-tracker/
+ 1911  git cherry-pick deployment-start
+ 1912  git add .
+ 1913  git commit -m "latest code for Paltracker commit"
+ 1914  git push
+ 1915  git push origin master --tags
+ 1916  git remote add origin https://github.com/mayurupadhyay/pal-tracker.git
+ 1917  git push origin master --tags
+ 1918  git add .
+ 1919  git commit -m "latestCode"
+ 1920  git push
+ 1921  cd ~/workspace/pal-tracker
+ 1922  git cherry-pack deployment-start
+ 1923  git cherry-pick deployment-start
+ 1924  git push
+ 1925  git cherry-pick deployment-start
+ 1926  git push
+ 1927  git cherry-pick deployment-start
+ 1928  git add .
+ 1929  git push
+ 1930  git commit -m "last change"
+ 1931  git cherry-pick deployment-start
+ 1932  git commit --allow-empty
+ 1933  cf set-env WELCOME_MESSAGE=Hello from Cloud Foundry
+ 1934  cf set-env PalTracker2_Env WELCOME_MESSAGE=Hello from Cloud Foundry
+ 1935  cf set-env PalTracker2_Env WELCOME_MESSAGE Hello_from_Cloud_Foundry
+ 1936  cf restage PalTracker2_Env
+ 1937  cf stop PalTracker2_Env
+ 1938  cf set-env PalTracker2_Env WELCOME_MESSAGE 'Hello from Cloud Foundry'
+ 1939  cf restage PalTracker2_Env
+ 1940  cd ..
+ 1941  cd pal-tracker/
+ 1942  ls
+ 1943  cf stop PalTracker2_Env
+ 1944  cf delete PalTracker2_Env
+ 1945  ./gradlew clean assemble
+ 1946  cf push PalTracker_Env -p build/libs/pal-tracker.jar 
+ 1947  cf push PalTracker_Env -p build/libs/pal-tracker.jar --random-route
+ 1948  cd ~/workspace/assignment-submission
+ 1949  ./gradlew cloudNativeDeveloperCloudFoundry -PserverUrl=https://paltrackerenv-funny-antelope.cfapps.io/
+ 1950  cd ..
+ 1951  cd pal-tracker/
+ 1952  git add .
+ 1953  git commit -m "Lab2_PalTracker with environment setup using Manifest.yml"
+ 1954  git push
+ 1955  mkdir -p src/main/java
+ 1956  ls
+ 1957  ./gradlew bootRun
+ 1958  cf login api.run.pivotal.io
+ 1959  cf push PAL-TRACKER_G -p /build/libs/pal-tracker.jar --random-route
+ 1960  cf push PAL-TRACKER_G -p '/build/libs/pal-tracker.jar' --random-route
+ 1961  cf push PAL-TRACKER_G -p ./build/libs/pal-tracker.jar --random-route
+ 1962  ./gradlew clean build
+ 1963  cf push PalTracker ./build/libs/pal-tracker.jar --random-route
+ 1964  cd build
+ 1965  cd libs
+ 1966  ls
+ 1967  cf stop PalTracker
+ 1968  cf login api.run.pivotal.io
+ 1969  cf stop PalTracker
+ 1970  cf push PalTracker-1 -p pal-tracker.jar --random-route
+ 1971  cf delete PalTracker
+ 1972  ls
+ 1973  cd..
+ 1974  cd ..
+ 1975  ./gradlew bootrun
+ 1976  WELCOME_MESSAGE=hello ./gradlew bootRun
+ 1977  MEMORY_LIMIT
+ 1978  ./gradlew bootrun
+ 1979  ./gradlew test
+ 1980  MEMORE_LIMIT=4 ./gradlew bootRun
+ 1981  MEMORY_LIMIT=4 ./gradlew bootRun
+ 1982  cf login api.run.pivotal.io
+ 1983  ./grabelw clean build
+ 1984  ./grablew clean build
+ 1985  ./gradlew clean build
+ 1986  ./gradlew clean assembled
+ 1987  ./gradlew clean assemble
+ 1988  cf push PalTracker2_Env -p build/libs/pal-tracker.jar --random-route
+ 1989  cd ~/workspace/pal-tracker
+ 1990  git cherry-pick pipeline-start
+ 1991  cf domians
+ 1992  cf domain
+ 1993  cf cli domains
+ 1994  cf domains --help
+ 1995  cf --help
+ 1996  cf help -a
+ 1997  cf domains
+
